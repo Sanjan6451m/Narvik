@@ -1659,13 +1659,10 @@ section.banner-blog .banner-caption h1 {
         position: relative;
         opacity: 1;
     }
-    .mobile-break {
-        display: block;
-        content: "";
-        margin: 0;
-        padding: 0;
-    }
+   
     .cd-words-wrapper b.is-visible {
+      /*   text-wrap: wrap;
+        max-width: 100% !important; */
         opacity: 1;
     }
     .cd-words-wrapper b.is-hidden {
