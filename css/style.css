@@ -656,6 +656,7 @@ nav.fixed-top {
     background-color: #fff;
     -webkit-box-shadow: 0px 0px 18px 1px rgba(0, 0, 0, 0.1);
     box-shadow: 0px 0px 18px 1px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease-in-out;
 }
 
 nav.fixed-top .logo {
@@ -1592,6 +1593,7 @@ section.banner-blog .banner-caption h1 {
 
     .banner .banner-caption {
         width: 95% !important;
+        padding: 15px !important;
     }
     .navbar-collapse {
         text-align: center;
@@ -1677,4 +1679,20 @@ section.banner-blog .banner-caption h1 {
     .cd-words-wrapper b {
         white-space: nowrap;
     }
+}
+
+.navbar-brand.logo img {
+    transition: all 0.3s ease-in-out;
+    max-height: 40px;
+    width: auto;
+    opacity: 1;
+}
+
+.navbar-brand.logo img:hover {
+    opacity: 0.8;
+}
+
+/* Ensure smooth transition when navbar becomes fixed */
+.nav.fixed-top {
+    transition: background-color 0.3s ease-in-out;
 }

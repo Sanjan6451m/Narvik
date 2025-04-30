@@ -103,11 +103,21 @@ $(function() {
     /*========Navbar Scrolling Background========*/
     wind.on("scroll", function() {
         var bodyScroll = wind.scrollTop(),
-            navbar = $(".navbar")
-        if (bodyScroll > 300) {
+            navbar = $(".navbar"),
+            logo = $('.navbar-brand.logo img'),
+            homeSection = $('#home');
+            
+        console.log('Scroll position:', bodyScroll);
+        console.log('Home section height:', homeSection.outerHeight());
+            
+        if (bodyScroll > homeSection.outerHeight()) {
+            console.log('Switching to logo3');
             navbar.addClass("fixed-top");
+            logo.attr('src', 'images/narviklogo3.png');
         } else {
+            console.log('Switching to logo1');
             navbar.removeClass("fixed-top");
+            logo.attr('src', 'images/narviklogo1.png');
         }
     });
 
