@@ -571,6 +571,7 @@ nav.navbar {
 }
 
 nav.navbar .logo {
+    width: 150px;
     font-size: 22px;
     font-weight: 800;
     text-transform: uppercase;
@@ -1584,6 +1585,14 @@ section.banner-blog .banner-caption h1 {
 /*============ 15. Mobile Responsive  ============*/
 
 @media screen and (max-width: 991px) {
+
+    nav.navbar {
+        padding-top: 10px !important;
+    }
+
+    .banner .banner-caption {
+        width: 95% !important;
+    }
     .navbar-collapse {
         text-align: center;
         background-color: rgba(34, 34, 34, 0.9);
@@ -1640,4 +1649,35 @@ section.banner-blog .banner-caption h1 {
     height: 100%;
     object-fit: cover;
     z-index: -1;
+}
+
+/* Mobile line breaks */
+@media screen and (max-width: 767px) {
+    .cd-words-wrapper b {
+       /*  display: block;
+        white-space: normal; */
+        position: relative;
+        opacity: 1;
+    }
+    .mobile-break {
+        display: block;
+        content: "";
+        margin: 0;
+        padding: 0;
+    }
+    .cd-words-wrapper b.is-visible {
+        opacity: 1;
+    }
+    .cd-words-wrapper b.is-hidden {
+        opacity: 0;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .mobile-break {
+        display: none;
+    }
+    .cd-words-wrapper b {
+        white-space: nowrap;
+    }
 }

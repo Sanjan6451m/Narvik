@@ -150,5 +150,8 @@ jQuery(document).ready(function($){
 	function switchWord($oldWord, $newWord) {
 		$oldWord.removeClass('is-visible').addClass('is-hidden');
 		$newWord.removeClass('is-hidden').addClass('is-visible');
+		// Force reflow to ensure smooth transition
+		$oldWord[0].offsetHeight;
+		$newWord[0].offsetHeight;
 	}
 });
