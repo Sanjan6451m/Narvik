@@ -1665,6 +1665,7 @@ section.banner-blog .banner-caption h1 {
     .cd-words-wrapper b.is-visible {
       /*   text-wrap: wrap;
         max-width: 100% !important; */
+        font-size: 14px;
         opacity: 1;
     }
     .cd-words-wrapper b.is-hidden {
